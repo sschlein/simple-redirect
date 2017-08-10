@@ -11,7 +11,7 @@ $app = new \Slim\App;
 
 $app->get('/', function (Request $request, Response $response) {
 
-    return $response->withStatus(302)->withHeader('Location', getenv('SLACK_URL'));
+    return $response->withStatus(302)->withHeader('Location', getenv('REDIRECT_URL'));
 });
 
 $app->run();
